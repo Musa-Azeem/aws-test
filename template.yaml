@@ -22,7 +22,7 @@ Resources:
             Method: any
     Metadata:
       DockerTag: nodejs14.x-v1
-      DockerContext: ./my-app
+      DockerContext: ./
       Dockerfile: Dockerfile
 
 Outputs:

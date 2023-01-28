@@ -41,3 +41,7 @@ Steps:
 
 **Delete A Lambda Function**:
 - `aws cloudformation delete-stack --stack-name \<stack name\>
+
+**Test Locally**
+- `sam local invoke`
+- `sam local start-api`
