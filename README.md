@@ -16,7 +16,7 @@ Steps:
 
 3. Build (`sam build`) and Deploy (`sam deploy --guided`)
 - give stack_name, etc.
-- in future deployments, only need `sam deploy`
+- in future deployments, only need `sam build` and `sam deploy`
 
 4. Go to API Gateway on AWS and follor the steps:
 - Click Create API button at the top
