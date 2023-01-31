@@ -7,6 +7,10 @@ Steps:
 - create a user In one of these ways:
     - create a user with Admistrator permissions [here](`https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1&skipRegion=true#/users)
     - or (the less correct way) create access key for root user from top left corner drop menu -> security credentials
+- configure: `aws configure`
+    - get access and secret access keys from aws online
+    - region: `us-east-2`
+    - default output: `json`
 
 2. Install SAM from [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 
