@@ -10,7 +10,8 @@ Steps:
 
 2. Install SAM from [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 
----- might not need this ----
+---
+might not need this part
 
 3. Create an s3 bucket with `aws s3api create-bucket --bucket <bucket-name> --region <region> --create-bucket-configuration LocationConstraint=<region>`
 - region can be `us-east-2`
@@ -18,7 +19,7 @@ Steps:
 
 4. Create ECR repo with `aws ecr create-repository --repository-name hello-world`
 
------------ _ ------------
+---
 
 5. Build (`sam build`) and Deploy (`sam deploy --guided`)
 - give stack_name, etc.
@@ -45,3 +46,10 @@ Steps:
 **Test Locally**
 - `sam local invoke`
 - `sam local start-api`
+
+
+## Invoke Rest API
+- Find invoke URL from API Gateway -> APIs -> this API -> Stages -> Prod -> click one of the methods
+- or get it from the lambda page -> triggers
+
+- https:/https://{restapi_id}.execute-api.{region}.amazonaws.com/Prod/\<url path\>
