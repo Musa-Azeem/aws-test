@@ -10,21 +10,10 @@ Steps:
 
 2. Install SAM from [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 
----
-might not need this part
-
-3. Create an s3 bucket with `aws s3api create-bucket --bucket <bucket-name> --region <region> --create-bucket-configuration LocationConstraint=<region>`
-- region can be `us-east-2`
-- change region and s3-bucket values in `samconfig.toml` to be the same
-
-4. Create ECR repo with `aws ecr create-repository --repository-name hello-world`
-
----
-
-5. Build (`sam build`) and Deploy (`sam deploy --guided`)
+3. Build (`sam build`) and Deploy (`sam deploy --guided`)
 - give stack_name, etc.
 
-6. Go to API Gateway on AWS and follor the steps:
+4. Go to API Gateway on AWS and follor the steps:
 - Click Create API button at the top
 - In the Choose an API type: Select REST API card and click Build
 - Give it a name: sam-test and click create
@@ -37,8 +26,9 @@ might not need this part
 - Click on Configure as proxy resource and then Create Resource
 - Set Lambda Integration to true and select your region and then select our function in the Lambda Function.
 
-7. Deploy API (actions -> deploy API -> create new stage)
+5. Deploy API (actions -> deploy API -> create new stage)
 
+---
 
 **Delete A Lambda Function**:
 - `aws cloudformation delete-stack --stack-name \<stack name\>
@@ -46,7 +36,6 @@ might not need this part
 **Test Locally**
 - `sam local invoke`
 - `sam local start-api`
-
 
 ## Invoke Rest API
 - Find invoke URL from API Gateway -> APIs -> this API -> Stages -> Prod -> click one of the methods
